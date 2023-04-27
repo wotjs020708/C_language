@@ -18,7 +18,7 @@
   
   
  ##### 예제
-'''c
+'''C
 #include<stdio.h>
 
 void print_stars(){
