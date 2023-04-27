@@ -65,7 +65,7 @@ valuse = max(인수) ---> int max(매개 변수)
 //인수의 개수가 일치하지 않으면 아주 찾기 어려운 오류가 발생하게 된다.
 ```  
 ---------------------------------------------------------
-#### 예제
+##### 예제
 
 ```c
 #include <stdio.h>
@@ -87,3 +87,23 @@ int main(void)
 }
 ```
 ---------------------------------------------
+#### Lab : 정수를 입력받는 get_integer() 함수
+>입력 안내 메시지를 출력하고 정수를 입력받아서 우리에게 반환해주는 함수
+get_integer()를 작성해보자
+```c
+#include<stdio.h>
+int get_integer(){
+
+  int value;
+  printf("정수를 입력하시오 :");
+  scanf("%d",&value);
+  return value;
+}
+
+int main(){
+  printf("%d",get_integer());
+
+}
+```
+
+
