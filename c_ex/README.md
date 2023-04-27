@@ -65,3 +65,24 @@ valuse = max(인수) ---> int max(매개 변수)
 //인수의 개수가 일치하지 않으면 아주 찾기 어려운 오류가 발생하게 된다.
 ```  
 ---------------------------------------------------------
+#### 예제
+
+```c
+#include <stdio.h>
+int max(int x, int y)
+{
+ if (x > y)
+ return x;
+ else
+ return y;
+}
+int main(void)
+{
+ int x, y, larger;
+ printf("정수 2개를 입력하시오: ");
+ scanf("%d %d", &x, &y);
+ larger = max(x, y);
+ printf("더 큰 값은 %d입니다. \n", larger);
+ return 0;
+}
+```
