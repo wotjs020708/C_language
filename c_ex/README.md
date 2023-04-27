@@ -18,7 +18,7 @@
   
   
  ##### 예제
-'''C
+```C
 #include<stdio.h>
 
 void print_stars(){
@@ -37,5 +37,5 @@ int main (){
   return 0;
 
 }
-'''
+```
   
