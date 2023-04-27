@@ -38,4 +38,18 @@ int main (){
 
 }
 ```
+
+####매개 변수와 반환값
+```c
+int max(int x, int y){ //int 변환형 max 이름 (int x, int y) 매개변수 
+ if( x > y){   //함수 몸체
+  return x;
+ }
+ else{
+  return y;
+ }
+}
+//x y 입력받아 x 가 크면 x를 return 해주고 
+//y가 크면 y를 return 해준다.
+```
   
