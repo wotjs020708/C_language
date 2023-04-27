@@ -105,5 +105,21 @@ int main(){
 
 }
 ```
+#### Lab 정수의 합을 계산하는 add() 함수
+>두 개의 정수를 받아서 합을 계산하는 함수를 만들어보자. 함수 이름부터 결정하여야 한다.
+```c
+#include<stdio.h>
 
+int add(int x, int y){
+ 
+ return x+y;
 
+}
+
+int main(){
+ int x, y;
+ printf("정수를 입력해주세요 : ");
+ scanf("%d %d",&x,&y);
+ printf("%d",add(x,y));
+}
+```
