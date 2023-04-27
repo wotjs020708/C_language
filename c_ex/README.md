@@ -55,5 +55,6 @@ int max(int x, int y){ //int 변환형 max 이름 (int x, int y) 매개변수
 #### 인수와 매개변수
 * 인수(argument)는 함수에 실제로 전달되는 값
 * 매개 변수(parameter)는 이 값을 전달받는 변수이다.
- valuse = max(인수) ---> int max(매개 변수)
-  
+```c
+valuse = max(인수) ---> int max(매개 변수)
+```  
