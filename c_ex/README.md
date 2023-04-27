@@ -42,7 +42,7 @@ int main (){
 ---------------------------------------------------------------------
 #### 매개 변수와 반환값
 ```c
-int max(int x, int y){ //int 변환형 max 이름 (int x, int y) 매개변수 
+int max(int x, int y){ //int 반환형 max 이름 (int x, int y) 매개변수 
  if( x > y){   //함수 몸체
   return x;
  }
