@@ -14,3 +14,28 @@
 * 함수
   * 사용자 정의 함수
   * 라이브러리 함
+  
+  
+  
+ ##### 예제
+'''c
+#include<stdio.h>
+
+void print_stars(){
+  for (int i = 0; i < 30; i++)
+  {
+    printf("*");
+  }
+  
+}
+
+int main (){
+  print_stars(); //함수 호출
+  printf("\nHello World!\n");
+  print_stars(); //함수 호출
+  printf("\n"); 
+  return 0;
+
+}
+'''
+  
