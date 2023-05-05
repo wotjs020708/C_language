@@ -123,3 +123,24 @@ int main(){
  printf("%d",add(x,y));
 }
 ```
+-----------
+### 재귀 함수
+
+```c
+#include<stdio.h>
+
+int factorial(int n) { 
+    if (n <= 1) { 
+        return (0);
+    } 
+    printf("함수 :%d\n",n);
+    return n * factorial(n-1);
+    //n * n * n * 1? == 4 * 3 * 2 * 1
+    
+}
+
+int main(){
+
+printf("메인 :%d\n",factorial(4));
+}
+```
