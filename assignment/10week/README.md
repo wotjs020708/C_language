@@ -16,10 +16,10 @@ int main(void){
 
   for (toss = 0; toss < 100; toss++) // 동전을 100번 던진다.
   {
-    if(coin_toss() == 1){ //coin_toss을 호출하여 반환한 값이 1인지 비교한다.
+    if(coin_toss() == 1){ //coin_toss을 호출하여 반환한 값이 1 이면
       heads++; // 앞면이면 heads 1증가
     }
-    else{
+    else{ //coint_toss을 호출하여 반환한 값이 1이 아니면
       tails++; // 뒷면이면  tails 1증가
     }
   }
