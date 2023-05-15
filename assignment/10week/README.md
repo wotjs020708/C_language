@@ -1,4 +1,5 @@
 ## LAB: 동전 던지기 게임
+* 동전을 100번 던져서 앞면이 나오는 횟수와 뒤션이 나오는 회수를 출력한다.
 ```c
 #include<stdio.h>
 #include<stdlib.h>//srand, rand 함수    
