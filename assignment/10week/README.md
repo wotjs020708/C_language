@@ -108,7 +108,7 @@ int main(void){
     car3_dist+= rand() % 100;//자동차3의 거리를 무작위로 증가
     disp_car(1, car1_dist);//disp_car 함수 호출 자동차1의 위치를 표시
     disp_car(2, car2_dist);//disp_car 함수 호출 자동차2의 위치를 표시
-    dsip_car(3, car3_dist);//disp_car 함수 호출 자동차3의 위치를 표시
+    disp_car(3, car3_dist);//disp_car 함수 호출 자동차3의 위치를 표시
     printf("------------------\n");
     _getch; //사용자가 키를 누를 때까지 대기
   }
