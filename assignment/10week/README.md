@@ -115,3 +115,236 @@ int main(void){
   return 0;
 }
 ```
+### 수학 함수
+
+```c
+#include<stdio.h>
+#include<math.h> //수학 함수를 위한 해더 파일
+
+
+void print_bar(){
+  printf("\n");
+  for (int i = 0; i < 30; i++)
+  {
+    printf("-");
+  }
+  printf("\n");
+}
+int main(){
+  double result, value = 1.6;
+
+  result = floor(value); //반내림
+  printf("%f\n", result);
+  result = ceil(value); //반올림
+  printf("%lf\n", result);
+  print_bar();
+  printf("12.의 절대값은 %f\n",fabs(12.0));
+  printf("-12.0읠 절대값은 %f\n",fabs(-12));
+  print_bar();
+  printf("10의 3승은 %0f.\n",pow(10.0,3.0));
+  printf("64의 제곱근은 %.0f\n",sqrt(64));
+  print_bar();
+  
+}
+```
+```c
+//삼각 함수 라이브러리
+#include<math.h>
+#include<stdio.h>
+
+int main(void){
+
+  double pi = 3.1415926535; //파이값을 pi에 저장
+  double x, y;// 실수형 변수 x, y 선언
+
+  x = pi /2; //pi 나누기 2의 몫을 x에 저장
+  y = sin(x); // x의 사인값을 y에 저장
+  printf("sin ( %f ) = %f\n",x, y); // x의 값과 y 의 값을 출력
+  y = cos(x); // x의 코사인값을 y에 저장
+  printf("cos( %f ) = %f\n", x, y); // x의 값과 y 이 값을 출력
+}
+```
+```c
+#include<stdlib.h>
+#include<stdio.h>
+
+int main(void){
+  system("dir"); // 콘솔에 dir 이라는 명령어를 실행
+  printf("아무 키나 치세요\n");
+  _getch(); //사용자가 키를 누를때 까지 대기
+  system("cls");// 콘솔에서 cls이라는 명령어를 실행
+  return 0;
+} 
+```
+```c
+#include<stdio.h>
+#include<time.h>
+
+int main(){
+time_t start, end; //time_t = unsigned long 과 동일하다.
+start = time(NULL); //현 시각을 start 에 저장
+printf("10초가 되면 아무키나 누르세오 \n");
+while (1)// 무한 루프
+{
+  if (getch())//키를 입력받으면 true로 변환
+  {
+    break;// 무한 루프에서 탈출
+  } 
+  }
+  printf("종료되었씁니다. \n");
+  end = time(NULL); // 현 현 시각을 end 에 저장
+  printf("경과된 시간은 %ld 초 입니다. \n", end - start); // end 와 start 를 뺴면 경과시각을 출력한다.
+  return 0;
+
+}
+```
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double height, distance, tree_height, degerees, radians;
+
+    printf("나무와의 길이(단위는 미터):");
+    scanf("%lf", &distance);
+
+    printf("측정자의 키 (단위는 미터):");
+    scanf("%lf", &height);
+
+    printf("각도(단위는 도):");
+    scanf("%lf", &degerees);
+
+    radians = degerees * (3.141592 / 180.0);
+
+    tree_height = tan(radians) * distance + height;
+    printf("나무의 높이(단위는 미터): %lf\n",tree_height);
+    return 0;
+}
+```
+```c
+// #include<stdio.h>
+// #include<math.h>
+// #define PI 3.141592
+
+// double red(double degree){
+//   return PI * degree / 180.0;
+// }
+
+// void drawbar(int height){
+//   for (int i = 0; i < height; i++)
+//   {
+//     printf("*");
+//   }
+//   printf("\n");
+// }
+
+// int main(){
+//   int degree, x, y;
+//   for (degree = 0; degree <= 90; degree += 10)
+//   {
+//     y = (int)(60*sin(red((double)degree)) + 0.5);
+//     drawbar(y);
+//   }
+  
+// }
+#include <stdio.h>
+#include <math.h>
+#define PI 3.141592
+double rad(double degree)
+{
+return PI * degree / 180.0;
+}
+void drawbar(int height)
+{
+for (int i = 0; i < height; i++)
+printf("*");
+printf("\n");
+}
+int main(void)
+{
+int degree, x, y;
+for (degree = 0; degree <= 90; degree += 10) {
+// 싸인값은 -1.0에서 1.0이므로 정수로 반올림하여서 증폭한다.
+y = (int)(60 * sin(rad((double)degree)) + 0.5);
+drawbar(y);
+}
+return 0;
+}
+```
+```c
+#include<stdio.h>
+#include<math.h>
+
+int menu(void){
+
+  int n;
+  printf("1.팩토리얼\n");
+  printf("2.싸인\n");
+  printf("3.로그(base_10)\n");
+  printf("4.제곱근\n");
+  printf("5.순열(npr)\n");
+  printf("6.조합(nCr)\n");
+  printf("7.종료\n");
+  printf("산텍헤주세요 :\n");
+  scanf("%d", &n);
+  return n;
+}
+void factorial(){
+  long long n, result=1, i;
+  printf("정수를 입력하시오: ");
+  scanf("%lld", &n);
+  for (i = 1; i <= n; i++)
+  {
+    result = result * i;
+  }
+  printf("결과 = %lld",result);
+  
+}
+
+void sine(){
+double a, result;
+printf("각도를 입력하시오: ");
+scanf("%lf", &a);
+result = sin(a);
+printf("결과 = %lf\n\n", result);
+}
+
+void logBase10(){
+  double a, result;
+  printf("실수값을 입력하시오: ");
+  scanf("%lf", &a);
+  if (a <= 0.0){
+    printf("오류\n");
+  }
+  else{
+    result = log10(a);
+    printf("결과 = %lf\n\n", result);
+  }
+}
+
+int main(void){
+
+    while (1)
+    {
+      switch (menu())
+      {
+      case 1:
+        factorial();
+        break;
+      case 2:
+        sine();
+        break;
+      case 3:
+        logBase10();
+        break;
+      case 7:
+        printf("종료합니다.");
+        return 0;
+      default:
+        printf("잘못도니 선택입니다.");
+        break;
+      }
+    }
+    
+}
+```
