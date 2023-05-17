@@ -283,7 +283,7 @@ void factorial(){ // 팩토리얼 함수
   {
     result = result * i;
   }
-  printf("결과 = %lld\",result); // 팩토리얼 값을 출력
+  printf("결과 = %lld\n",result); // 팩토리얼 값을 출력
   
 }
 
